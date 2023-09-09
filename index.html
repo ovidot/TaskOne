@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ovidot's</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <div class="name" data-testid="slackUserName">Uzezi Ovraiti</div>
+    <img src="images/portrait.png" alt="Ovidot" data-testid="slackDisplayImage" width="300">
+    <div class="Dayofweek" id="dayOfWeek" data-testid="currentDayOfTheWeek"></div>
+    <div id="datetime" data-testid="currentDayOfTheWeek"></div>
+    <div class="track" data-testid="myTrack"> Frontend</div>
+    <a href="https://github.com/ovidot/Task-one">Github repository</a>
+</body>
+<script  type="text/javascript">
+    function dayOfWeeks(){
+        const day = new Date().getDay();
+        var weekday = ['Sunday', 'Monday','Tuesday','Wednesday','Thursday','Friday','Saturday'];
+        const dayInt = weekday[day];
+
+        document.querySelector('#dayOfWeek').textContent = dayInt
+
+    }
+    dayOfWeeks()
+
+    function updateDate(){
+        const now = new Date();
+        const currentDateTime = now.toUTCString();
+        const dateInMilliseconds = now.getUTCHours() +":"+ now.getUTCMinutes()+":" +now.getUTCSeconds()+":" + now.getUTCMilliseconds()
+
+        document.querySelector('#datetime').textContent = dateInMilliseconds  ;
+    }
+
+    setInterval(updateDate, 100)
+</script>
+</html>

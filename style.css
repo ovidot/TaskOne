@@ -1,0 +1,17 @@
+body {
+  color: black;
+  text-align: center;
+  padding-top: 100px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+.name {
+  font-size: 80px;
+}
+
+.Dayofweek {
+  font-size: 30px;
+}
+
+.track {
+  font-size: 40px;
+}
